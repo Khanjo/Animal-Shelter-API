@@ -60,5 +60,13 @@ namespace AnimalShelter.Controllers
 
             return dog;
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Dog>> Post(Dog dog)
+        {
+            _db.Dogs.Add(dog);
+            await _db.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetDog), new { id = dog.DogId }, dog);
+        }
     }
 }
