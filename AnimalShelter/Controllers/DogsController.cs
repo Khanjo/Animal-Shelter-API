@@ -50,6 +50,7 @@ namespace AnimalShelter.Controllers
             return await query.ToListAsync();
         }
 
+        [EnableCors("policy1")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Dog>> GetDog(int id)
         {
