@@ -83,7 +83,7 @@ namespace AnimalShelter.Controllers
             {
                 await _db.SaveChangesAsync();
             }
-            catch
+            catch (DbUpdateConcurrencyException)
             {
                 if (!CatExists(id))
                 {
@@ -94,6 +94,7 @@ namespace AnimalShelter.Controllers
                     throw;
                 }
             }
+
             return NoContent();
         }
 

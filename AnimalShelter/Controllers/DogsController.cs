@@ -83,7 +83,7 @@ namespace AnimalShelter.Controllers
             {
                 await _db.SaveChangesAsync();
             }
-            catch
+            catch (DbUpdateConcurrencyException)
             {
                 if (!DogExists(id))
                 {
