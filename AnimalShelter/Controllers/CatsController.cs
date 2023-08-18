@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace AnimalShelter.Controllers
 {
@@ -15,6 +16,7 @@ namespace AnimalShelter.Controllers
             _db = db;
         }
 
+        [EnableCors("policy1")]
         [HttpGet]
         public async Task<List<Cat>> Get(string name, string breed, string color, string pattern, int maxAge)
         {
