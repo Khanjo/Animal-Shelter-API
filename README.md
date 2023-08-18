@@ -29,18 +29,18 @@ API for an animal shelter with full CRUD Functionality with list for cats and do
   ### HTTP Requests
 
 | Request Type  | Route | Parameters |
-| :---------- | -----: |
+| :---------- | ---------- | :---------- |
 | GET | /api/Cats | name, breed, color, pattern, maxAge |  
-| GET | /api/Cats/{id} |
-| POST | /api/Cats | 
-| PUT | /api/Cats/{id} | 
-| DELETE| /api/Cats/{id} | 
-
+| GET | /api/Cats/{id} | |
+| POST | /api/Cats | |
+| PUT | /api/Cats/{id} | |
+| DELETE| /api/Cats/{id} | |
+| | | |
 | GET | /api/Dogs | name, breed, color, pattern, maxAge |
-| GET | /api/Dogs/{id} |
-| POST | /api/Dogs | 
-| PUT | /api/Dogs/{id} | 
-| DELETE| /api/Dogs/{id} | 
+| GET | /api/Dogs/{id} | |
+| POST | /api/Dogs | |
+| PUT | /api/Dogs/{id} | |
+| DELETE| /api/Dogs/{id} | |
 
 #### Further Exploration:
 
